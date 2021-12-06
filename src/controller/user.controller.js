@@ -13,7 +13,7 @@ router.post('/', async (req, res) => {
         const admins = await User.find({ role: "admin" });
 
 
-        sendMail("sachidanand.kpradhan@gmail.com.com",
+        sendMail("sachidanand.kpradhan@gmail.com",
             req.body.email,
             `Welcome to ABC system ${req.body.first_name}  ${req.body.last_name}`,
             `Hi  ${req.body.first_name}, Please confirm your email address`,
@@ -27,7 +27,7 @@ router.post('/', async (req, res) => {
 
         const to_string = to_array.join(",");
 
-        sendMail("sachidanand.kpradhan@gmail.com.com",
+        sendMail("sachidanand.kpradhan@gmail.com",
             to_string,
             `${req.body.first_name} ${req.body.last_name} has registered with us`,
             `Please welcome ${req.body.first_name} ${req.body.last_name}`,
